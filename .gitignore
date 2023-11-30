@@ -33,3 +33,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+#By default your app saves all your images locally, which is fine during development, 
+#but we don’t want to save them with your app source code.
+public/uploads/

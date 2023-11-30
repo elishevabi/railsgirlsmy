@@ -11,7 +11,9 @@
 
   <p>
     <strong>Picture:</strong>
-    <%= idea.picture %>
+	<%# Using the image_tag we have told Rails to display the file upload as an image %>
+	<%#if it is present on the idea. Ideas without a picture will not show one. %>
+    <%= image_tag(idea.picture_url, width: 600) if idea.picture? %>
   </p>
 
 </div>
