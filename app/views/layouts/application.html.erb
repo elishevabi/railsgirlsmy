@@ -26,6 +26,10 @@
 			<li class="nav-item">
 			<a class="nav-link <%= 'active' if current_page?(controller: 'ideas') %>" href="/ideas">Ideas</a>
 			</li>
+			<!-- You can now navigate between the ideas and the about pages in your app through one unified navigation bar -->
+			<li class="nav-item">
+			  <a class="nav-link <%= 'active' if current_page?(controller: 'pages', action: 'about') %>" href="/pages/about">About</a>
+			</li>
 		</ul>
 		</div>
 	</div>
