@@ -9,7 +9,14 @@ gem "rails", "~> 7.1.2"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+#gem "sqlite3", "~> 1.4"
+# Use another database on Fly.io deploys
+group :development do
+  gem "sqlite3"
+end
+group :production do
+  gem "pg"
+end
 
 #for picture uploader:
 gem "carrierwave"
