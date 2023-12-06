@@ -1,9 +1,8 @@
+<p style="color: green"><%= notice %></p>
 <h1>New idea</h1>
 
 <%= render "form", idea: @idea %>
 
-<br>
-
-<div>
-  <%= link_to "Back to ideas", ideas_path %>
+<div class="d-flex gap-3 py-2">
+  <%= link_to "Back to ideas", ideas_path, class: "btn btn-outline-secondary" %>
 </div>

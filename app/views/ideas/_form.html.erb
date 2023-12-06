@@ -1,3 +1,4 @@
+<p style="color: green"><%= notice %></p>
 <%= form_with(model: idea) do |form| %>
   <% if idea.errors.any? %>
     <div style="color: red">
@@ -11,22 +12,22 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="mb-2">
+    <%= form.label :name, style: "display: block", class: "mb-1" %>
+    <%= form.text_field :name, class: "form-control mb-2" %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <div class="mb-2">
+    <%= form.label :description, style: "display: block", class: "mb-1" %>
+    <%= form.text_area :description, class: "form-control mb-2", rows: "2" %>
   </div>
 
-  <div>
-    <%= form.label :picture, style: "display: block" %>
-    <%= form.file_field :picture %>
+  <div class="mb-2">
+    <%= form.label :picture, style: "display: block", class: "mb-1" %>
+    <%= form.file_field :picture, class: "form-control form-control-sm mb-3" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mb-2">
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>

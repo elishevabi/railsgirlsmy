@@ -2,9 +2,8 @@
 
 <%= render "form", idea: @idea %>
 
-<br>
-
-<div>
-  <%= link_to "Show this idea", @idea %> |
-  <%= link_to "Back to ideas", ideas_path %>
+<div class="d-flex gap-3 py-2">
+  <%= link_to "Show this idea", @idea, class: "btn btn-primary" %>
+  <%= link_to "Back to ideas", ideas_path, class: "btn btn-outline-secondary" %>
 </div>
+
