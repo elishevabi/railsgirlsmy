@@ -8,6 +8,9 @@ class IdeasController < ApplicationController
 
   # GET /ideas/1 or /ideas/1.json
   def show
+	#This will load the comments that belong a specific idea object from the database. 
+	#We can then access the comments using the @comments instance variable in the view later.
+	@comments = @idea.comments
   end
 
   # GET /ideas/new
