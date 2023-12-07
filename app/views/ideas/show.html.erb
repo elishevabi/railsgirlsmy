@@ -26,6 +26,7 @@
       <p><%= comment.body %></p>
       <%= button_to "Destroy this comment", idea_comment_path(@idea, comment), method: :delete, class: "btn btn-danger", form: { data: { turbo_confirm: "Are you sure?" } } %>
     </div>
+	<br>
   <% end %>
 <% else %>
   <p>No comments found.</p>
